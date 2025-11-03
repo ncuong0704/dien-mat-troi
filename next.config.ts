@@ -1,7 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    // Cho phép tải ảnh tối ưu hóa từ Pixabay CDN
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.pixabay.com",
+      },
+    ],
+  },
 };
 
 export default nextConfig;
