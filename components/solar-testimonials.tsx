@@ -116,7 +116,7 @@ export function SolarTestimonials() {
                 </div>
 
                 {/* Quote */}
-                <blockquote className="text-gray-700 text-lg leading-relaxed">"{currentTestimonial.quote}"</blockquote>
+                <blockquote className="text-gray-700 text-lg leading-relaxed">&ldquo;{currentTestimonial.quote}&rdquo;</blockquote>
 
                 {/* Savings Badge */}
                 <div
