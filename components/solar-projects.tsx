@@ -66,15 +66,13 @@ export function SolarProjects() {
   const filteredProjects = projects.filter((project) => (activeFilter === "all" ? true : project.type === activeFilter))
 
   return (
-    <section className="py-8 px-4 relative overflow-hidden">
+    <section className="py-16 sm:py-24 px-4 relative overflow-hidden">
       {/* Background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <Image src="/placeholder.svg?height=800&width=1600" alt="" fill className="object-cover" />
-      </div>
+      
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
-        <h2 className="text-4xl font-bold text-center mb-8" style={{ color: "#1092CF" }}>
+        <h2 className="text-2xl sm:text-4xl font-bold text-center mb-8 uppercase" style={{ color: "#1092CF" }}>
           Dự án thực tế
         </h2>
 
@@ -83,7 +81,7 @@ export function SolarProjects() {
           <Button
             onClick={() => setActiveFilter("all")}
             variant={activeFilter === "all" ? "default" : "outline"}
-            className={`text-lg px-6 py-6 rounded-lg transition-all ${
+            className={`text-base sm:text-lg px-6 py-6 rounded-lg transition-all ${
               activeFilter === "all" ? "text-white" : "border-2 text-gray-700 hover:border-[#1092CF]"
             }`}
             style={activeFilter === "all" ? { backgroundColor: "#1092CF" } : {}}
@@ -93,7 +91,7 @@ export function SolarProjects() {
           <Button
             onClick={() => setActiveFilter("residential")}
             variant={activeFilter === "residential" ? "default" : "outline"}
-            className={`text-lg px-6 py-6 rounded-lg transition-all flex items-center gap-2 ${
+            className={`text-base sm:text-lg px-6 py-6 rounded-lg transition-all flex items-center gap-2 ${
               activeFilter === "residential" ? "text-white" : "border-2 text-gray-700 hover:border-[#1092CF]"
             }`}
             style={activeFilter === "residential" ? { backgroundColor: "#1092CF" } : {}}
@@ -104,7 +102,7 @@ export function SolarProjects() {
           <Button
             onClick={() => setActiveFilter("commercial")}
             variant={activeFilter === "commercial" ? "default" : "outline"}
-            className={`text-lg px-6 py-6 rounded-lg transition-all flex items-center gap-2 ${
+            className={`text-base sm:text-lg px-6 py-6 rounded-lg transition-all flex items-center gap-2 ${
               activeFilter === "commercial" ? "text-white" : "border-2 text-gray-700 hover:border-[#1092CF]"
             }`}
             style={activeFilter === "commercial" ? { backgroundColor: "#1092CF" } : {}}
@@ -122,17 +120,17 @@ export function SolarProjects() {
               className="group relative overflow-hidden rounded-lg shadow-lg transition-transform hover:scale-105 m-2"
             >
               {/* Project image */}
-              <div className="relative h-80 w-full">
+              <div className="relative aspect-[4/3] w-full">
                 <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                  <h3 className="text-2xl font-bold mb-2" style={{ color: "#1092CF" }}>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-100 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2" style={{ color: "#1092CF" }}>
                     {project.title}
                   </h3>
                   <p className="text-white mb-4">Công suất: {project.capacity}</p>
                   <Button
-                    className="w-full text-lg py-6 rounded-lg font-semibold transition-all hover:opacity-90"
+                    className="w-full text-base sm:text-lg py-6 rounded-lg font-semibold transition-all hover:opacity-90"
                     style={{ backgroundColor: "#FFE205", color: "#000" }}
                   >
                     Chi tiết

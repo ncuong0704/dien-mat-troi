@@ -1,0 +1,44 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1200" fill="#031B2C" />
+  <g opacity="0.35">
+    <path d="M0 120L1600 0V1200H0V120Z" fill="url(#paint0_linear)" />
+  </g>
+  <g opacity="0.12">
+    <path d="M0 320L1600 160V1200H0V320Z" fill="url(#paint1_linear)" />
+  </g>
+  <g opacity="0.08">
+    <circle cx="280" cy="380" r="220" fill="#0D7AB8" />
+    <circle cx="1380" cy="260" r="180" fill="#0B5F90" />
+    <circle cx="1050" cy="880" r="240" fill="#063A5B" />
+  </g>
+  <g opacity="0.1" stroke="#0D7AB8" stroke-width="1">
+    <path d="M80 0L80 1200" />
+    <path d="M240 0L240 1200" />
+    <path d="M400 0L400 1200" />
+    <path d="M560 0L560 1200" />
+    <path d="M720 0L720 1200" />
+    <path d="M880 0L880 1200" />
+    <path d="M1040 0L1040 1200" />
+    <path d="M1200 0L1200 1200" />
+    <path d="M1360 0L1360 1200" />
+    <path d="M1520 0L1520 1200" />
+    <path d="M0 80L1600 80" />
+    <path d="M0 240L1600 240" />
+    <path d="M0 400L1600 400" />
+    <path d="M0 560L1600 560" />
+    <path d="M0 720L1600 720" />
+    <path d="M0 880L1600 880" />
+    <path d="M0 1040L1600 1040" />
+  </g>
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="120" x2="1600" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#063A5B" />
+      <stop offset="1" stop-color="#0B5F90" stop-opacity="0.4" />
+    </linearGradient>
+    <linearGradient id="paint1_linear" x1="0" y1="320" x2="1600" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D7AB8" />
+      <stop offset="1" stop-color="#02182A" />
+    </linearGradient>
+  </defs>
+</svg>
+

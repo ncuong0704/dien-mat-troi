@@ -15,10 +15,10 @@ export default function Home() {
       <SolarNavbar />
       <SolarHero />
       <SolarBenefits />
-      <SolarProcess />
-      <SolarTestimonials />
       <SolarServices />
       <SolarProjects />
+      <SolarProcess />
+      <SolarTestimonials />
       <SolarBlog />
       <SolarCTA />
       <SolarFooter />

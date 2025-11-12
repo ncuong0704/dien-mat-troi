@@ -46,7 +46,7 @@ export function SolarBenefits() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null)
 
   return (
-    <section className="relative w-full py-8 sm:py-16 overflow-hidden">
+    <section className="relative w-full py-16 sm:py-24 overflow-hidden">
       {/* Background with sun rays pattern */}
       <div className="absolute inset-0 -z-10">
         <img src="/placeholder.svg?height=800&width=1920" alt="" className="h-full w-full object-cover opacity-30" />
@@ -56,7 +56,7 @@ export function SolarBenefits() {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="mb-8 sm:mb-12 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-2" style={{ color: "#1092CF" }}>
+          <h2 className="text-2xl sm:text-4xl font-bold mb-2 uppercase" style={{ color: "#1092CF" }}>
             Lợi ích nổi bật
           </h2>
           <p className="text-gray-600 text-base sm:text-lg">
@@ -65,7 +65,7 @@ export function SolarBenefits() {
         </div>
 
         {/* Benefits Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {benefits.map((benefit) => {
             const IconComponent = benefit.icon
             return (
@@ -125,7 +125,7 @@ export function SolarBenefits() {
                       color: "white",
                     }}
                   >
-                    Learn More
+                    Đọc thêm
                   </Button>
                 </div>
               </Card>

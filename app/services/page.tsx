@@ -1,10 +1,8 @@
 import { AboutHero } from "@/components/about-hero"
-import { AboutMission } from "@/components/about-mission"
-import { AboutStats } from "@/components/about-stats"
-import { AboutValues } from "@/components/about-values"
 import { SolarCTA } from "@/components/solar-cta"
 import { SolarFooter } from "@/components/solar-footer"
 import { SolarNavbar } from "@/components/solar-navbar"
+import { SolarServices } from "@/components/solar-services"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -18,9 +16,7 @@ export default function AboutPage() {
     <main className="flex min-h-screen flex-col bg-white">
       <SolarNavbar />
       <AboutHero />
-      <AboutMission />
-      <AboutStats />
-      <AboutValues />
+      <SolarServices />
       <SolarCTA />
       <SolarFooter />
     </main>

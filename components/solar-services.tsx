@@ -1,13 +1,11 @@
 "use client"
 
-import { useState } from "react"
 import { HomeIcon, BuildingOfficeIcon, WrenchScrewdriverIcon } from "@heroicons/react/24/outline"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import Image from "next/image"
 
 export function SolarServices() {
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null)
-
   const services = [
     {
       id: 1,
@@ -36,31 +34,28 @@ export function SolarServices() {
   ]
 
   return (
-    <section className="relative py-8 overflow-hidden">
+    <section className="relative py-16 sm:py-24 overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1092CF] to-[#FFE205]" />
+        <Image src="https://cdn.pixabay.com/photo/2010/12/13/10/34/alternative-2937_640.jpg" alt="" fill className="object-cover" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-[#1092CF] mb-2">Dịch vụ chính</h2>
-          <p className="text-gray-600 text-lg">Giải pháp năng lượng mặt trời toàn diện</p>
+          <h2 className="text-2xl sm:text-4xl font-bold text-[#1092CF] mb-2 uppercase">Dịch vụ chính</h2>
+          <p className="text-gray-600 text-lg">Giải pháp năng lượng mặt t uppercaseiện</p>
         </div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => {
             const Icon = service.icon
-            const isHovered = hoveredCard === service.id
 
             return (
               <Card
                 key={service.id}
                 className="group relative overflow-hidden bg-white border-2 border-gray-100 hover:border-[#1092CF] transition-all duration-300 hover:scale-105"
-                onMouseEnter={() => setHoveredCard(service.id)}
-                onMouseLeave={() => setHoveredCard(null)}
               >
                 <div className="p-4">
                   {/* Icon and Title */}
@@ -68,7 +63,7 @@ export function SolarServices() {
                     <div className="p-3 bg-[#FFE205] rounded-lg">
                       <Icon className="w-8 h-8 text-[#1092CF]" />
                     </div>
-                    <h3 className="text-2xl font-bold text-[#1092CF]">{service.title}</h3>
+                    <h3 className="text-xl sm:text-2xl font-bold text-[#1092CF]">{service.title}</h3>
                   </div>
 
                   {/* Main Image */}
@@ -80,23 +75,6 @@ export function SolarServices() {
                     />
                     {/* Yellow overlay on hover */}
                     <div className="absolute inset-0 bg-[#FFE205] opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-                  </div>
-
-                  {/* Hover Gallery */}
-                  <div
-                    className={`grid grid-cols-2 gap-2 mb-4 transition-all duration-300 ${
-                      isHovered ? "max-h-48 opacity-100" : "max-h-0 opacity-0"
-                    } overflow-hidden`}
-                  >
-                    {service.galleryImages.map((img, idx) => (
-                      <div key={idx} className="relative h-24 rounded-lg overflow-hidden">
-                        <img
-                          src={img || "/placeholder.svg"}
-                          alt={`${service.title} gallery ${idx + 1}`}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    ))}
                   </div>
 
                   {/* Bullet Points */}

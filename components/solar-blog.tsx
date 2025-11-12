@@ -33,12 +33,12 @@ export function SolarBlog() {
   ]
 
   return (
-    <section className="relative py-8 overflow-hidden">
+    <section className="relative py-16 sm:py-24 overflow-hidden">
       {/* Background Pattern */}
       <div
         className="absolute inset-0 opacity-5"
         style={{
-          backgroundImage: "url(/placeholder.svg?height=800&width=1600&query=news+pattern+subtle)",
+          backgroundImage: "url(https://cdn.pixabay.com/photo/2019/12/16/08/31/daisy-4698867_640.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -47,14 +47,14 @@ export function SolarBlog() {
       <div className="relative max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold mb-2" style={{ color: "#1092CF" }}>
+          <h2 className="text-2xl sm:text-4xl font-bold mb-2 uppercase" style={{ color: "#1092CF" }}>
             Tin tức mới nhất
           </h2>
           <p className="text-gray-600">Cập nhật thông tin và xu hướng năng lượng mặt trời</p>
         </div>
 
         {/* Blog Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {blogPosts.map((post) => (
             <article
               key={post.id}
@@ -91,7 +91,7 @@ export function SolarBlog() {
 
                 {/* Read More Button */}
                 <Button
-                  className="w-full text-lg rounded-lg"
+                  className="w-full text-base sm:text-lg rounded-lg"
                   style={{
                     backgroundColor: "#1092CF",
                     color: "white",
@@ -108,7 +108,7 @@ export function SolarBlog() {
         <div className="text-center mt-8">
           <a
             href="#"
-            className="inline-flex items-center gap-2 text-lg font-semibold hover:underline"
+            className="inline-flex items-center gap-2 text-base sm:text-lg font-semibold hover:underline"
             style={{ color: "#1092CF" }}
           >
             Xem tất cả bài viết

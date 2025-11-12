@@ -33,15 +33,15 @@ export function SolarProcess() {
   ]
 
   return (
-    <section className="relative py-8 sm:py-16 overflow-hidden">
+    <section className="relative py-16 sm:py-24 overflow-hidden ">
       {/* Background workflow pattern */}
       <div className="absolute inset-0 opacity-5">
-        <img src="/placeholder.svg?height=800&width=1600" alt="" className="w-full h-full object-cover" />
+        <img src="https://cdn.pixabay.com/photo/2016/05/01/21/20/earth-1365995_960_720.jpg" alt="" className="w-full h-full object-cover" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4">
         {/* Header */}
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16" style={{ color: "#1092CF" }}>
+        <h2 className="text-2xl sm:text-4xl font-bold text-center mb-12 sm:mb-16 uppercase" style={{ color: "#1092CF" }}>
           Quy trình 3 bước
         </h2>
 
@@ -87,7 +87,7 @@ export function SolarProcess() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-2xl font-bold text-center mb-4" style={{ color: "#1092CF" }}>
+                  <h3 className="text-xl sm:text-2xl font-bold text-center mb-4" style={{ color: "#1092CF" }}>
                     {step.title}
                   </h3>
 
@@ -113,7 +113,7 @@ export function SolarProcess() {
 
                   {/* Button */}
                   <Button
-                    className="w-full text-lg font-semibold rounded-lg py-6 hover:opacity-90 transition-opacity"
+                    className="w-full text-base sm:text-lg font-semibold rounded-lg py-6 hover:opacity-90 transition-opacity"
                     style={{ backgroundColor: "#FFE205", color: "#1092CF" }}
                   >
                     {step.buttonText}
